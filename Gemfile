@@ -1,11 +1,14 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
+ruby '2.1.2'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 gem 'puma'
 gem 'pg'
+gem 'rails_12factor'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
