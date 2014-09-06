@@ -27,10 +27,16 @@ RUN rbenv global 2.1.2
 RUN gem install bundler
 RUN rbenv rehash
 
-ADD . /vocal/root
-WORKDIR /vocal/root
 
+ADD ./Gemfile /vocal/root/Gemfile
+ADD ./Gemfile.lock /vocal/root/Gemfile.lock
+
+WORKDIR /vocal/root
 RUN bundle install
+
+ADD . /vocal/root
+
+
 RUN rbenv rehash
 
 CMD rails s
