@@ -22,7 +22,7 @@ RUN git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plu
 ENV RBENV_ROOT /usr/local/rbenv
 ENV PATH $RBENV_ROOT/bin:$RBENV_ROOT/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-RUN rbenv install 2.1.2
+RUN CONFIGURE_OPTS="--disable-install-doc" rbenv install 2.1.2
 RUN rbenv global 2.1.2
 RUN gem install bundler
 RUN rbenv rehash
