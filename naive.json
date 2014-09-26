@@ -1,0 +1,6 @@
+{
+  "domain": {
+    "main": "example.com",
+    "redirects": ["meh.example.com", "myapp.jipiboily.net"]
+  }
+}
